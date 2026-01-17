@@ -10,6 +10,9 @@ export default class SaveSubtitlesPopup extends OverlayItem {
   constructor(props) {
     super(i18n`Select format`, true);
     this.props = props;
+
+    new SaveSubtitleHandler().save('srt', props.fileName);
+
     <div this='content'>
       {this.formats = list('dl', SaveSubtitleHandler)}
       {props.lang && this.renderAppendLangCheckbox()}
@@ -79,4 +82,3 @@ class SaveSubtitleHandler {
     }
   }
 }
-

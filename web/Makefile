@@ -174,6 +174,7 @@ $(DEPS_DIR)/lib/libavcodec.a:
 		--disable-inline-asm \
 		--disable-doc \
 		--disable-stripping \
+		--disable-pthreads \
 		--nm='llvm-nm -g' \
 		--ar=emar \
 		--cc=emcc \
